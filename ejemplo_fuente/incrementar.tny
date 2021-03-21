@@ -1,0 +1,15 @@
+{ Programa de ejemplo
+  en lenguaje TINY -
+  Se imcrementa un valor menor
+  a cien hasta que sea igual
+  a cien
+}
+read x; { Introducir un Interger }
+if x < 100 then { Se ejecuta el resto del programa si x < 10 }
+  y := x; { Se guarda el valor original de x en y } 
+  repeat
+    inc x; { El valor de x crece en uno } 
+    write x { Se imprime el nuevo valor de x }
+  until x = 100;
+  write y  { Se imprime y al final }
+end

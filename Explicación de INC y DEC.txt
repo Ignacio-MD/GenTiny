@@ -1,0 +1,25 @@
+******MODIFICACIONES********
+**lexico.flex:
+Agregué dos nuevos tokens llamados "dec" y "inc",para decrementar e incrementar respectivamente.
+
+***sintactico.cup 
+-Agregué los simbolos terminales DEC e INC a la lista de terminales
+
+-Agregué los no terminales: non terminal NodoBase dec_stmt y non terminal NodoBase inc_stmt a la lista de los no terminales.
+
+-Agregué en el apartado del stmt::= (linea 102 del archivo) las expresiones para dec_stmt y para el inc_stmt
+
+-En la linea 166 incluí las expresiones para el dec_stmt; en la linea 177 lo hice para el inc_stmt
+
+****Creacion de Nodos en el paquete ast
+-Cree dos clases nuevas que se llaman NodoDecrementar y NodoIncrementar
+
+*******En la clase Generador.java
+-En el metodo de generar (linea 60), coloquéque si el nodo es una instancia de NodoIncrementar o NodoDecrementar, llamo a las metodos generarIncrementar y generarDecrementar
+
+-Por ultimo,al final del archivo (a partir de la linea 234), creo los metodos del punto anterior.
+
+
+Y eso es todo. Para hacer el llamado se utiliza:
+inc variable;//esto para incrementar
+dec variable;//esto para decrementar

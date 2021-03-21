@@ -1,0 +1,12 @@
+{ Programa de ejemplo
+  en lenguaje TINY -
+  Comprobar si un numero
+  es mayor a otro
+}
+read x; { introducir un Interger }
+read y; { introducir otro Interger }
+if x > y then { Verifica si x es mayor a y }
+  write 1  { Imprime uno si es verdadero }
+else
+  write 0  { Imprime cero si es falso }
+end
